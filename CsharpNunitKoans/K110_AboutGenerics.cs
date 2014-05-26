@@ -1,4 +1,5 @@
 using NUnit.Framework;
+using System;
 
 namespace TheKoans
 {
@@ -142,7 +143,7 @@ namespace TheKoans
 			var expected = new[]{ typeof(Person), typeof(Cat) };
 
 			Assert.AreEqual (2, paul.GetType ().GetGenericArguments ().Length);
-			Assert.AreEqual (new object[]{typeof(Person),typeof(Cat)}, paul.GetType ().GetGenericArguments ());
+			Assert.AreEqual (new Type[]{typeof(Person),typeof(Cat)}, paul.GetType ().GetGenericArguments ());
 		}
 
 		[Test]
